@@ -1,0 +1,35 @@
+.navbarContainer{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbarTitle{
+    width:50%;
+    color: var(--color-darkTeal);
+    cursor: pointer;
+    font-size: var(--fontsize-virgin);
+}
+.navbarExtras{
+    color: var(--text-color-purity);
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem ;
+    align-items: center;
+}
+.navbarConnect{
+    display: flex;
+    gap: .5rem ;
+}
+.navbarAbout{
+    display: flex;
+    align-items: center; 
+    gap: .5rem;
+}
+.navbarNext{
+    /* margin-top: 10%; */
+    fill: var(--text-color-purity);
+}
