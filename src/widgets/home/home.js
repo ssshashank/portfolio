@@ -1,6 +1,9 @@
+
+import homeStyles from "./style.module.css";
+
 const Home = () => {
     return (
-        <div>
+        <div className={homeStyles.homeContainer}>
             <h1>Home</h1>
         </div>
     )

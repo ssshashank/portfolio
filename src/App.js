@@ -1,10 +1,15 @@
 import './App.css';
 import Index from './screens/index';
+import Layout from './screens/layout/layout';
+import Navbar from './widgets/navbar/navbar';
 
-function App() {
+const  App=() =>{
   return (
-    <div>
-      <Index />
+    <div className="appContainer">
+      <Navbar title="Portfolio"/>
+      <Layout>
+      <Index/>
+      </Layout>
     </div>
   );
 }
