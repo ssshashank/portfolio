@@ -1,5 +1,5 @@
 :root{
-  --primary-color:#3300ff;
+  --primary-color:#3a0fe5;
   --primary-colorWithOpacity:#6644ed;
   --secondary-color:#d5ef0d;
   --warning-color:#FFC107;
@@ -43,7 +43,7 @@ html {
 }
 
 *{
-  box-sizing: border-box;
+
   box-sizing: border-box;
   word-wrap: break-word;
   text-rendering: optimizeLegibility;
