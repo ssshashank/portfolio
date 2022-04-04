@@ -6,7 +6,7 @@ import Navbar from './widgets/navbar/navbar';
 const  App=() =>{
   return (
     <div className="appContainer">
-      {/* <Navbar title="Portfolio"/> */}
+      <Navbar title="Portfolio"/>
       <Layout>
         <Index/>
       </Layout>
