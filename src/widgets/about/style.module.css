@@ -1,0 +1,8 @@
+.aboutContainer{
+    border:1px solid black;
+    z-index: 2;
+    padding-top: 8%;
+    display: flex;
+    height: 100vh;
+    background-color: yellow
+}

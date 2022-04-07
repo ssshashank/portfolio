@@ -1,6 +1,8 @@
 .homeContainer{
     border: 1px solid red;
     z-index: 1;
+    /* display: flex; */
+    padding-top: 10%;
+    height: 100vh;
     background-color: var(--primary-color);
-    /* height: 100vh; */
 }

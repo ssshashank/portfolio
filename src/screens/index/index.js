@@ -3,6 +3,7 @@ import About from '../../widgets/about/about';
 import Home from '../../widgets/home/home';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { gsap } from "gsap";
+import Footer from '../../widgets/footer/footer';
 gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
@@ -27,6 +28,9 @@ const Index = () => {
             </section>
             <section className="stacking-slide">
                 <About/>
+            </section>
+            <section className="stacking-slide">
+                <Footer/>
             </section>
         </div>
     )
