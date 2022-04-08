@@ -76,3 +76,19 @@ body {
 .stacking-slide:nth-last-child(1){
   height: 100vh;
 } 
+
+.content {
+  margin: 64px auto;
+  max-width: 1280px;
+}
+.content .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.content .flex .img {
+  width: 44%;
+  height: 340px;
+  background-color: red;
+  margin-bottom: 64px;
+}
