@@ -1,4 +1,4 @@
-import { useEffect,useState } from 'react';
+import { useEffect,useRef } from 'react';
 import About from '../../widgets/about/about';
 import Home from '../../widgets/home/home';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
@@ -8,7 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
     
-    
+    const aboutRef=useRef(null);
+    const footerRef=useRef(null);
+
     useEffect(()=>{
         gsap.utils.toArray(".stacking-slide").forEach((item, i) => {
             
@@ -34,8 +36,8 @@ const Index = () => {
             <section className="stacking-slide" >
                 <Home/>
             </section>
-            <section className="stacking-slide" >
-                <About/>
+            <section className="stacking-slide" ref={aboutRef}  >
+                <About aboutRef={aboutRef}/>
             </section>
             <section className="stacking-slide">
                 <Footer/>

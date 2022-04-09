@@ -5,19 +5,23 @@ import { gsap} from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 
-const About = ({index}) => {
+const About = ({aboutRef}) => {
   
   const boxRef = useRef(null);
   const one=useRef(null)
+  let lastScrollToTop=0;
+  
   const onScroll = () => {
 
-    const scrollPos = window.scrollY + window.innerHeight
-    console.log("boxref current---",one.current.getBoundingClientRect())
-    console.log("scrollPOs----",scrollPos)
-    if (one.current.getBoundingClientRect().top < scrollPos) {
-  
+    // const scrollPos = window.scrollY + window.innerHeight
+    // console.log("aboutRef current---",aboutRef.current.getBoundingClientRect().top)
+    // console.log("scrollPOs----",scrollPos)
+    
+    
+    if (aboutRef.current.getBoundingClientRect().top<1) {
       // enter animation code here
-      boxRef.current=gsap.timeline({delay: 1})
+      
+      boxRef.current=gsap.timeline({delay: 1,reversed:true,ease:"elastic"})
       .to(boxRef.current,{
         width:"100%",
       })
@@ -27,17 +31,15 @@ const About = ({index}) => {
         marginLeft:"100%",
         // ease:Power2.easeInOut
       })
+      
+    }else if(aboutRef.current.getBoundingClientRect().top>900){
+      boxRef.current.pause(0)
     }
-  
-    
-  
   }
-  useEffect(() => {
 
-    window.addEventListener("scroll", onScroll,true)
-  
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll,false)
     return () => window.removeEventListener("scroll", onScroll,true)
-  
   },[])
   
 
@@ -48,7 +50,6 @@ const About = ({index}) => {
         </div>
         <div className={aboutStyles.one} ref={one}> 
           <div className={aboutStyles.two} ref={boxRef}>
-
           </div>
         </div>
     </div>
