@@ -10,7 +10,7 @@ const Index = () => {
     
     
     useEffect(()=>{
-        gsap.utils.toArray(".stacking-slide").map((item, i) => {
+        gsap.utils.toArray(".stacking-slide").forEach((item, i) => {
             
             ScrollTrigger.create({
                 id:"myId",
